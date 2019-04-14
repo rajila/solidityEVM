@@ -3,6 +3,7 @@ Instalar web3 dentro del proyecto:
 
 Activar el servicio GETH:
 	geth --dev --mine --rpc --unlock=0
+	// geth --dev --mine --rpc --rpcaddr 192.168.32.139 --rpccorsdomain "http://192.168.32.139:8545" --unlock=0
 	
 	Para activar el servicio, cuando pide el paragrahp dar un ENTER
 
@@ -24,10 +25,10 @@ var proof = proofContract.new(
  })
 
 
-Addres actual: 0x832717746cb408f857613d49e2a615a6af2a6f34
+Addres actual: 0x0b72b8964a8619ef8439d7042769c7b927aa7c02
 
 // Probar el uso del contrato
-var contract_obj = proofContract.at("0x832717746cb408f857613d49e2a615a6af2a6f34");
+var contract_obj = proofContract.at("0x0b72b8964a8619ef8439d7042769c7b927aa7c02");
 contract_obj.set.sendTransaction("Ronald","e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", {
 from: web3.eth.accounts[0],
 }, function(error, transactionHash){
