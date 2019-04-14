@@ -69,6 +69,7 @@ var socket = io("http://localhost:8080");
 
 socket.on("connect", function () {
 	socket.on("message", function (msg) {
+		console.log(msg);
 		if($("#events_list").text() == "No Transaction Found")
 		{
 			$("#events_list").html("<li>Txn Hash: " + msg.transactionHash + "\nOwner: " + msg.args.owner + "\nFile Hash: " + msg.args.fileHash + "</li>");
