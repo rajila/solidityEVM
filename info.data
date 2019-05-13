@@ -20,7 +20,7 @@ Activar la consola JAVASCRIPT en otra consola
 		personal.newAccount("<password>")
 		
 	-- desbloquear cuenta
-		personal.unlockAccount(eth.accounts[2],”<password>”)
+		personal.unlockAccount(eth.accounts[2],”<password>”, <number_gas>)
 		
 	-- Puedo comprobar el gasPrice y ver si la cuenta origen tiene fondos suficientes:
 		eth.gasPrice
