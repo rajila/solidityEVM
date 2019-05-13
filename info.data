@@ -25,7 +25,21 @@ Activar la consola JAVASCRIPT en otra consola
 	-- Puedo comprobar el gasPrice y ver si la cuenta origen tiene fondos suficientes:
 		eth.gasPrice
 		
-	
+
+		To connect to the mainnet network, you just need to run the geth command. Here is an
+		example of how to specify the network ID explicitly and specify a custom directory where
+		geth will store the downloaded blockchain:
+			
+			geth --datadir "/users/packt/ethereum" --networkid 1
+			
+			The --datadir option is used to specify where to store the blockchain. If it's not provided,
+			the default path is $HOME/.ethereum.
+			
+			--networkid is used to specify the network ID. 1 is the ID of the mainnet network. If it's
+			not provided, the default value is 1. The network ID of testnet is 2.
+
+
+		
 
 var proofContract = web3.eth.contract([{"constant":true,"inputs":[{"name":"fileHash","type":"string"}],"name":"get","outputs":[{"name":"timestamp","type":"uint256"},{"name":"owner","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"owner","type":"string"},{"name":"fileHash","type":"string"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"status","type":"bool"},{"indexed":false,"name":"timestamp","type":"uint256"},{"indexed":false,"name":"owner","type":"string"},{"indexed":false,"name":"fileHash","type":"string"}],"name":"logFileAddedStatus","type":"event"}]);
 
